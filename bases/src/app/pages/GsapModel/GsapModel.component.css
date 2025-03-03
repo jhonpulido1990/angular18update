@@ -1,0 +1,16 @@
+/* Global styles come from external css https://codepen.io/GreenSock/pen/xxmzBrw/fcaef74061bb7a76e5263dfc076c363e.css
+ */
+.box {
+  width: 20px;
+  height: 20px;
+}
+.green {
+  background: green;
+}
+
+.blue {
+  background: blue;
+}
+.purple {
+  background: purple;
+}
