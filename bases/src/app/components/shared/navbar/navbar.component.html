@@ -10,10 +10,14 @@
     color: white;
     text-decoration: none;
   }
+  nav a.active {
+    color: red;
+  }
 </style>
 
 <nav>
-  <a [routerLink]="['/']">counter</a>
-  <a [routerLink]="['/hero']">hero</a>
-  <a [routerLink]="['/gsap']">gsap</a>
+  <a [routerLink]="['/']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">counter</a>
+  <a [routerLink]="['/hero']" [routerLinkActive]="'active'">hero</a>
+  <a [routerLink]="['/gsap']" [routerLinkActive]="'active'">gsap</a>
+  <a [routerLink]="['/dragonball']" [routerLinkActive]="'active'">dragonball</a>
 </nav>
