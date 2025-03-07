@@ -3,26 +3,31 @@ import { HeroPageComponent } from './pages/hero/hero-page.component';
 import { CounterPageComponent } from './pages/counter-page/counter-page.component';
 import { GsapModelComponent } from './pages/GsapModel/GsapModel.component';
 import { DragonballPageComponent } from './pages/dragonball/dragonball-page.component';
+import { DragonballSuperPageComponent } from './pages/dragonball-super/dragonball-super-page.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: CounterPageComponent
+    component: CounterPageComponent,
   },
   {
     path: 'hero',
-    component: HeroPageComponent
+    component: HeroPageComponent,
   },
   {
     path: 'gsap',
-    component: GsapModelComponent
+    component: GsapModelComponent,
   },
   {
     path: 'dragonball',
-    component: DragonballPageComponent
+    component: DragonballPageComponent,
+  },
+  {
+    path: 'dragonball-super',
+    component: DragonballSuperPageComponent,
   },
   {
     path: '**',
-    redirectTo: ''
-  }
+    redirectTo: '',
+  },
 ];

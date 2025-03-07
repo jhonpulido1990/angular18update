@@ -1,0 +1,12 @@
+<h1>DragonBall page</h1>
+<hr />
+
+<section class="row">
+  <div class="col-12 col-sm-6">
+    <app-character-add (newCharacter)="addPower($event)" />
+  </div>
+  <div class="col-12 col-sm-6">
+
+    <app-character-list [characters]="characters()" listName="Listado de personajes"/>
+  </div>
+</section>
