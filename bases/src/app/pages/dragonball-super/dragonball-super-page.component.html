@@ -3,10 +3,10 @@
 
 <section class="row">
   <div class="col-12 col-sm-6">
-    <app-character-add (newCharacter)="addPower($event)" />
+    <app-character-add (newCharacter)="dragonBallService.addPower($event)" />
   </div>
   <div class="col-12 col-sm-6">
 
-    <app-character-list [characters]="characters()" listName="Listado de personajes"/>
+    <app-character-list [characters]="dragonBallService.characters()" listName="Listado de personajes"/>
   </div>
 </section>

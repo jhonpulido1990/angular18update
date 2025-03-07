@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
-import { CharacterListComponent } from "../../components/dragonball/character-list/character-list.component";
+import { Component, inject, signal } from '@angular/core';
+import { CharacterListComponent } from '../../components/dragonball/character-list/character-list.component';
 import { Character } from '../../interfaces/character.interface';
-import { CharacterAddComponent } from "../../components/dragonball/character-add/character-add.component";
+import { CharacterAddComponent } from '../../components/dragonball/character-add/character-add.component';
+import { DragonballService } from '../../services/dragonball.service';
 
 @Component({
   selector: 'app-dragonball-super-page',
@@ -9,17 +10,5 @@ import { CharacterAddComponent } from "../../components/dragonball/character-add
   templateUrl: './dragonball-super-page.component.html',
 })
 export class DragonballSuperPageComponent {
-  name = signal('');
-  power = signal(0);
-
-
-  characters = signal<Character[]>([
-    { id: 1, name: 'Goku', power: 9001 },
-    { id: 2, name: 'Vegeta', power: 8001 },
-  ]);
-  addPower(character: Character) {
-    this.characters.update(
-      (list) => [...list, character]
-    )
-  }
+  public dragonBallService = inject(DragonballService);
 }
