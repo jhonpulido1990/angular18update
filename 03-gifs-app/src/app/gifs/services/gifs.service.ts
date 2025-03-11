@@ -12,9 +12,9 @@ export class GifService {
   }
 
   loadTrendingGifs() {
-    this.http.get<GiphyResponse>(`${environment}/gifs/trending`, {
+    this.http.get<GiphyResponse>(`${environment.giphy_url}/gifs/trending`, {
       params: {
-        api_key: environment.apiKey,
+        api_key: environment.giphy_apiKey,
         limit: 20,
       }
     }).subscribe((data) => {
