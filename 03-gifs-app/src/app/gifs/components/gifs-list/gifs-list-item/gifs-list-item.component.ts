@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { Gif } from '../../../interfaces/gif.interface';
 
 @Component({
   selector: 'app-gifs-list-item',
@@ -6,5 +7,5 @@ import { Component, input } from '@angular/core';
   templateUrl: './gifs-list-item.component.html',
 })
 export class GifsListItemComponent {
-  public gif = input.required<string>()
+  gif = input.required<string>()
 }
