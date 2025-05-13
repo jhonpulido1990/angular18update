@@ -28,5 +28,9 @@ export default class TrendingPageComponent {
     console.log('Scroll Height:', scrollHeight);
     // console.log('Scroll Total:', scrollTotal);
     console.log('Is at bottom:', isAtBottom);
+
+    if (isAtBottom) {
+      this.gifService.loadTrendingGifs();
+    }
   }
 }
